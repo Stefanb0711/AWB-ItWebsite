@@ -3,9 +3,13 @@ from flask import Flask, render_template, url_for, redirect, flash
 app = Flask(__name__)
 
 
+@app.route('/index')
+def index():
+    return render_template('index.html')
+
 @app.route('/', methods=['GET', 'POST'])
 def start():  # put application's code here
-    return render_template("index.html")
+    return render_template("start.html")
 
 
 @app.route("/starter-page", methods=["GET", "POST"])
@@ -48,7 +52,7 @@ def wie_wir_arbeiten():
 
 
 
-@app.route('/kontrakt', methods=['GET', 'POST'])
+@app.route('/kontakt', methods=['GET', 'POST'])
 def kontakt():
     return render_template("kontakt.html")
 
