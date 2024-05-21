@@ -8,6 +8,9 @@ def start():  # put application's code here
     return render_template("index.html")
 
 
+@app.route("/starter-page", methods=["GET", "POST"])
+def starter_page():
+    return render_template("starter-page.html")
 
 @app.route('/leistungen', methods=['GET', 'POST'])
 def leistungen():
