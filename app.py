@@ -78,12 +78,27 @@ sender_email = "werner.boehme@awb-it.de"
 receiver_email = "stefan.boehme@awb-it.de"
 password = "@@AnStWe20"
 
+
+
+
+
 @app.route('/index')
 def index():
     return render_template('index.html')
 
 @app.route('/', methods=['GET', 'POST'])
 def start():  # put application's code here
+    first_post = Posts(
+        date=datetime.datetime.now(),
+        title="Erster Post",
+        subtitle="Untertitel",
+        image="static/assets/img/IT-Security",
+        content="Haallaoaoa"
+
+    )
+
+    db.session.add(first_post)
+    db.session.commit()
     return render_template("start.html")
 
 
