@@ -1,3 +1,4 @@
+{% extends "base.html" %}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -24,44 +25,54 @@
     <!-- Starter Section Section -->
     <section id="starter-section" class="starter-section section">
 
-      <div class="container" data-aos="fade-up">
-        <p>Use this page as a starter for your own custom pages.</p>
+    <div style="text-align: center; justify-content: center; line-height:3;" class="content px-xl-5" data-aos="fade-up" data-aos-delay="100">
+        <h3 style="line-height: 1.7;" class="">Wir sind Spezialisten in der Software Entwicklung <br> im Bereich <strong>IT-Security, Telematik und Multimedia Systemen mit Schwerpunkt Linux.</strong></h3>
+        <h4 style="padding-bottom: 20px;" class="">
+            Wir unterstützen sie bei allen Schritten:
+        </h4>
+    </div>
+
+      <div class="container" data-aos="fade-up" style="text-align: left;">
+        <p style="line-height: 1.8;">Wir sind Spezialisten in der <strong>Softwareentwicklung</strong> mit einem besonderen Fokus auf <strong>IT-Security</strong>, <strong>Telematik</strong> und <strong>Multimedia-Systemen</strong>, wobei unser Hauptaugenmerk auf der <strong>Linux-Plattform</strong> liegt. Unsere Expertise und langjährige Erfahrung ermöglichen es uns, innovative und maßgeschneiderte Lösungen für verschiedene Branchen zu entwickeln.<br><br>
+
+Unser Leistungsspektrum umfasst die Entwicklung von <strong>Steuergeräten für die Automobilindustrie</strong>. Diese Steuergeräte sind essentiell für die modernen Fahrzeuge und tragen zur <strong>Sicherheit</strong>, <strong>Effizienz</strong> und <strong>Komfort</strong> bei.<br><br>
+
+Darüber hinaus entwickeln wir fortschrittliche <strong>Remote-Steuerungen</strong> für Testsysteme, die eine präzise und zuverlässige Durchführung von Tests ermöglichen, sowie <strong>Ferndiagnosesysteme</strong> für die <strong>Maschinen- und Haussteuerung</strong>. Diese Systeme helfen dabei, Ausfälle frühzeitig zu erkennen und Wartungsprozesse zu optimieren.<br><br>
+
+Ein weiterer Schwerpunkt unserer Entwicklung liegt im Bereich der <strong>Steuerungen im Maschinenbau</strong> auf Basis von <strong>Embedded Linux</strong>. Diese Lösungen sind speziell auf die Anforderungen des Maschinenbaus zugeschnitten und bieten eine hohe Zuverlässigkeit und Performance.<br><br>
+
+Unsere Remote-Steuerungen für <strong>automobile Testsysteme</strong> sind darauf ausgelegt, Testprozesse zu vereinfachen und die Effizienz zu steigern. Ebenso entwickeln wir <strong>Diagnosesysteme</strong> für Maschinen, die es ermöglichen, den Zustand von Maschinen kontinuierlich zu überwachen und Probleme rechtzeitig zu identifizieren.<br><br>
+
+Unser Ziel ist es, unsere Kunden mit qualitativ hochwertigen, kompetenten und professionellen Dienstleistungen zu unterstützen. Wir streben danach, durch unsere innovativen Softwarelösungen die Produktivität und Effizienz unserer Kunden zu steigern.<br><br>
+
+Durch enge Zusammenarbeit und individuelle Betreuung stellen wir sicher, dass unsere Lösungen perfekt auf die Bedürfnisse unserer Kunden abgestimmt sind. Wir legen großen Wert auf Qualität und setzen auf modernste Technologien und bewährte Methoden in der Softwareentwicklung.<br><br>
+
+Unser Team aus erfahrenen Entwicklern und Ingenieuren arbeitet kontinuierlich daran, neue und verbesserte Lösungen zu entwickeln, um den steigenden Anforderungen und Herausforderungen des Marktes gerecht zu werden.<br><br>
+
+Mit unserem umfassenden Know-how und unserer Leidenschaft für Technologie sind wir der ideale Partner für Ihre Projekte im Bereich IT-Security, Telematik und Multimedia-Systeme. Erleben Sie, wie unsere maßgeschneiderten Lösungen Ihre Geschäftsprozesse optimieren und Ihre Wettbewerbsfähigkeit steigern können.<br><br>
+
+Kontaktieren Sie uns noch heute, um mehr darüber zu erfahren, wie wir Sie mit unseren innovativen Dienstleistungen und Lösungen unterstützen können.
+</p>
       </div>
 
     </section><!-- /Starter Section Section -->
 
   </main>
 
-  <footer id="footer" class="footer">
+ <footer id="footer" class="footer">
 
-    <div class="footer-newsletter">
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-6">
-            <h4>Join Our Newsletter</h4>
-            <p>Subscribe to our newsletter and receive the latest news about our products and services!</p>
-            <form action="forms/newsletter.php" method="post" class="php-email-form">
-              <div class="newsletter-form"><input type="email" name="email"><input type="submit" value="Subscribe"></div>
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your subscription request has been sent. Thank you!</div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-
+    <!--
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
           <a href="index.html" class="d-flex align-items-center">
-            <span class="sitename">Arsha</span>
+            <span class="sitename">AWB-IT</span>
           </a>
           <div class="footer-contact pt-3">
-            <p>A108 Adam Street</p>
-            <p>New York, NY 535022</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>+1 5589 55488 55</span></p>
-            <p><strong>Email:</strong> <span>info@example.com</span></p>
+            <p>Hennersdorferstraße 8</p>
+            <p>Weil im Schönbuch, 71093</p>
+            <p class="mt-3"><strong>Phone:</strong> <span>+49 7031 496873</span></p>
+            <p><strong>Email:</strong> <span>info@awb-it.de</span></p>
           </div>
         </div>
 
@@ -82,3 +93,67 @@
             <li><i class="bi bi-chevron-right"></i> <a href="#">Web Development</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Product Management</a></li>
             <li><i class="bi bi-chevron-right"></i> <a href="#">Marketing</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12">
+          <h4>Follow Us</h4>
+          <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+          <div class="social-links d-flex">
+            <a href=""><i class="bi bi-twitter-x"></i></a>
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-instagram"></i></a>
+            <a href=""><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>-->
+
+        <!-- Footer -->
+        <div class="container" style="background-color: white;">
+          <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+              <li class="nav-item"><a class="nav-link px-2 text-body-secondary">Home</a></li>
+              <li class="nav-item"><a class="nav-link px-2 text-body-secondary">Impressum</a></li>
+              <li class="nav-item"><a class="nav-link px-2 text-body-secondary">Datenschutz</a></li>
+              <li class="nav-item"><a class="nav-link px-2 text-body-secondary">Cookies</a></li>
+              <li class="nav-item"><a class="nav-link px-2 text-body-secondary">Kontakt</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© 2024 Company, Inc</p>
+          </footer>
+        </div>
+
+
+    <div class="container copyright text-center mt-4">
+      <p>© <span>Copyright</span> <strong class="px-1 sitename">Arsha</strong> <span>All Rights Reserved</span></p>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you've purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: [buy-url] -->
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="../assets/vendor/php-email-form/validate.js"></script>
+  <script src="../assets/vendor/aos/aos.js"></script>
+  <script src="../assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="../assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="../assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="../assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="../assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="../assets/js/main.js"></script>
+
+{% endblock %}

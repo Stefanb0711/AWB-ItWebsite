@@ -57,6 +57,19 @@ def kontakt():
     return render_template("kontakt.html")
 
 
+@app.route("/impressum")
+def impressum():
+    return render_template("impressum.html")
+
+@app.route("/datenschutz")
+def datenschutz():
+    return render_template("datenschutz.html")
+
+@app.route("/cookies")
+def cookies():
+    return render_template("cookies.html")
+
+
 
 
 if __name__ == '__main__':
