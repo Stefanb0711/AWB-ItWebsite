@@ -1,4 +1,4 @@
-from flask import Flask, render_template, url_for, redirect, flash, request, flash
+from flask import Flask, render_template, url_for, redirect, flash, request
 from wtforms.fields.numeric import IntegerField
 from wtforms.fields.simple import PasswordField, EmailField
 from wtforms.validators import DataRequired, Email
@@ -57,6 +57,15 @@ class Posts(db.Model):
     image = db.Column(db.String(200), nullable=False)
 
 
+class ContactFormsData(UserMixin, db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column(db.String(200), nullable=False)
+    company = db.Column(db.String(200), nullable=False)
+    phone_number = db.Column(db.Integer, nullable=True)
+    mobile_phone_number = db.Column(db.Integer, nullable=False)
+    email = db.Column(db.String(120), nullable=False)
+    question = db.Column(db.String(400), nullable=False)
+
 with app.app_context():
     db.create_all()
 
@@ -66,7 +75,7 @@ port = 25
 
 #sender_email = "werner.boehme@awb-it.de"
 sender_email = "werner.boehme@awb-it.de"
-receiver_email = ""
+receiver_email = "stefan.boehme@awb-it.de"
 password = "@@AnStWe20"
 
 @app.route('/index')
@@ -190,37 +199,15 @@ def kontakt():
 
                 print("E-Mail sent.")
 
+
             except Exception as e:
                 print(e)
 
             # Email senden an sich selber
-            try:
-                message = MIMEMultipart()
-                message["From"] = sender_email
-                message["To"] = sender_email
-                message["Subject"] = " Neue Benutzeranfrage an Anfrage an AWB-IT (Website)"
 
-                body = f"""\n\n\nName: {name}
-                    Email: {email}
-                    Firma: {company}
-                    Mobilnummer: {mobil}
-                    Telefonnummer: {phone_number}
-                    Anfrage: {question}
-                    """
 
-                message.attach(MIMEText(body, 'plain'))
-
-                with smtplib.SMTP(smtp_server, port) as server:
-                    server.login(sender_email, password)
-                    server.sendmail(sender_email, sender_email, message.as_string())
-
-                print("E-Mail sent.")
-
-            except Exception as e:
-                print(e)
 
             return redirect(url_for('start'))
-
 
     return render_template("kontakt.html")
 
@@ -228,6 +215,9 @@ def kontakt():
 
 
 
+@app.route('/testseite')
+def testseite():
+    return render_template("testseite.html")
 
 
 
