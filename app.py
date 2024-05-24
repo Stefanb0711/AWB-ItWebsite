@@ -204,7 +204,30 @@ def kontakt():
                 print(e)
 
             # Email senden an sich selber
+            try:
+                message = MIMEMultipart()
+                message["From"] = sender_email
+                message["To"] = sender_email
+                message["Subject"] = " Neue Benutzeranfrage an Anfrage an AWB-IT (Website)"
 
+                body = f"""\n\n\nName: {name}
+                                Email: {email}
+                                Firma: {company}
+                                Mobilnummer: {mobil}
+                                Telefonnummer: {phone_number}
+                                Anfrage: {question}
+                                """
+
+                message.attach(MIMEText(body, 'plain'))
+
+                with smtplib.SMTP(smtp_server, port) as server:
+                    server.login(sender_email, password)
+                    server.sendmail(sender_email, sender_email, message.as_string())
+
+                print("E-Mail sent.")
+
+            except Exception as e:
+                print(e)
 
 
             return redirect(url_for('start'))
@@ -303,4 +326,4 @@ def cookies():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(app, host='0.0.0.0', port=5077, threads=1)
