@@ -78,12 +78,27 @@ sender_email = "werner.boehme@awb-it.de"
 receiver_email = "stefan.boehme@awb-it.de"
 password = "@@AnStWe20"
 
+
+
+
+
 @app.route('/index')
 def index():
     return render_template('index.html')
 
 @app.route('/', methods=['GET', 'POST'])
 def start():  # put application's code here
+    first_post = Posts(
+        date=datetime.datetime.now(),
+        title="Erster Post",
+        subtitle="Untertitel",
+        image="static/assets/img/IT-Security",
+        content="Haallaoaoa"
+
+    )
+
+    db.session.add(first_post)
+    db.session.commit()
     return render_template("start.html")
 
 
@@ -323,7 +338,8 @@ def cookies():
     return render_template("cookies.html")
 
 
+# IP 192.168.10.31
 
 
 if __name__ == '__main__':
-    app.run(app, host='0.0.0.0', port=5077, threads=1)
+    serve(app, host='0.0.0.0', port=5078)
