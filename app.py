@@ -338,7 +338,8 @@ def cookies():
     return render_template("cookies.html")
 
 
+# IP 192.168.10.31
 
 
 if __name__ == '__main__':
-    app.run(app, host='0.0.0.0', port=5077, threads=1)
+    serve(app, host='0.0.0.0', port=5078)
