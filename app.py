@@ -179,7 +179,7 @@ def kontakt():
 
             if not check_email_domain(email):
                 flash(f"Die Domain der E-Mail '{email}' existiert nicht")
-                return redirect(url_for("contact"))
+                return redirect(url_for("kontakt"))
 
             new_contact_data = ContactFormsData(
                 name=name,
@@ -219,30 +219,7 @@ def kontakt():
                 print(e)
 
             # Email senden an sich selber
-            try:
-                message = MIMEMultipart()
-                message["From"] = sender_email
-                message["To"] = sender_email
-                message["Subject"] = " Neue Benutzeranfrage an Anfrage an AWB-IT (Website)"
 
-                body = f"""\n\n\nName: {name}
-                                Email: {email}
-                                Firma: {company}
-                                Mobilnummer: {mobil}
-                                Telefonnummer: {phone_number}
-                                Anfrage: {question}
-                                """
-
-                message.attach(MIMEText(body, 'plain'))
-
-                with smtplib.SMTP(smtp_server, port) as server:
-                    server.login(sender_email, password)
-                    server.sendmail(sender_email, sender_email, message.as_string())
-
-                print("E-Mail sent.")
-
-            except Exception as e:
-                print(e)
 
 
             return redirect(url_for('start'))
@@ -317,12 +294,24 @@ def login():
 
 
 def check_email_domain(email):
-    domain = email.split('@')[1]
     try:
-        dns.resolver.resolve(domain, 'MX')
+        domain = email.split('@')[1]
+        dns_abfrage = dns.resolver.resolve(domain, 'MX')
+        print("DNS-Abfrage war erfolgreich für die Domain:", domain)
         return True
-    except :
+    except dns.resolver.NoAnswer:
+        print("Es gibt keinen MX-Eintrag für die Domain:", domain)
         return False
+    except dns.resolver.NXDOMAIN:
+        print("Die Domain existiert nicht:", domain)
+        return False
+    except dns.resolver.Timeout:
+        print("Zeitüberschreitung bei der DNS-Auflösung für die Domain:", domain)
+        return False
+    except Exception as e:
+        print("Ein unerwarteter Fehler ist aufgetreten:", str(e))
+        return False
+
 
 
 @app.route("/impressum")
