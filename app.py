@@ -80,7 +80,12 @@ password = "@@AnStWe20"
 
 
 
-
+@app.after_request
+def add_security_headers(response):
+    print("Setting security headers")
+    response.headers['X-Content-Type-Options'] = 'nosniff'
+    response.headers['X-Frame-Options'] = 'DENY'  # Optional: Zusätzlicher Header für Anti-Clickjacking
+    return response
 
 @app.route('/index')
 def index():
@@ -329,6 +334,24 @@ def cookies():
 
 # IP 192.168.10.31
 
+# 192.168.10.31:5080
+
 
 if __name__ == '__main__':
-    serve(app, host='0.0.0.0', port=5078)
+    class MethodFilterMiddleware(object):
+        def __init__(self, app):
+            self.app = app
+
+        def __call__(self, environ, start_response):
+            if environ['REQUEST_METHOD'] not in ['GET', 'POST']:
+                start_response('405 Method Not Allowed', [('Content-Type', 'text/plain')])
+                return [b'Method Not Allowed']
+            return self.app(environ, start_response)
+
+
+    app.wsgi_app = MethodFilterMiddleware(app.wsgi_app)
+    serve(app, host='0.0.0.0', port=5080)
+
+
+"""if __name__ == '__main__':
+    app.run(debug= True, port= 5088)"""
