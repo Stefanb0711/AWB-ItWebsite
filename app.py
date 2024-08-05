@@ -85,6 +85,7 @@ def add_security_headers(response):
     print("Setting security headers")
     response.headers['X-Content-Type-Options'] = 'nosniff'
     response.headers['X-Frame-Options'] = 'DENY'  # Optional: Zusätzlicher Header für Anti-Clickjacking
+    response.headers['X-XSS-Protection'] = '1; mode=block'
     return response
 
 @app.route('/index')
@@ -349,9 +350,9 @@ if __name__ == '__main__':
             return self.app(environ, start_response)
 
 
-    app.wsgi_app = MethodFilterMiddleware(app.wsgi_app)
-    serve(app, host='0.0.0.0', port=5080)
+    """app.wsgi_app = MethodFilterMiddleware(app.wsgi_app)
+    serve(app, host='0.0.0.0', port=5080)"""
 
 
-"""if __name__ == '__main__':
-    app.run(debug= True, port= 5088)"""
+if __name__ == '__main__':
+    app.run(debug= True, port= 5080)
