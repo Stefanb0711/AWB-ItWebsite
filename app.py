@@ -350,9 +350,9 @@ if __name__ == '__main__':
             return self.app(environ, start_response)
 
 
-    """app.wsgi_app = MethodFilterMiddleware(app.wsgi_app)
-    serve(app, host='0.0.0.0', port=5080)"""
+    app.wsgi_app = MethodFilterMiddleware(app.wsgi_app)
+    serve(app, host='0.0.0.0', port=5080)
 
 
-if __name__ == '__main__':
-    app.run(debug= True, port= 5080)
+"""if __name__ == '__main__':
+    app.run(debug= True, port= 5080)"""
