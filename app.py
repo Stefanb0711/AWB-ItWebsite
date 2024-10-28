@@ -18,6 +18,9 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from waitress import serve
 import dns.resolver
+from fpdf import FPDF
+from datetime import date
+
 
 db = SQLAlchemy()
 
@@ -33,6 +36,58 @@ bootstrap = Bootstrap5(app)
 login_manager = LoginManager()
 
 login_manager.init_app(app)
+
+
+
+
+
+
+#E-Rechnung KLasse
+class InvoicePDF(FPDF):
+    def header(self):
+        self.set_font('Arial', 'B', 12)
+        self.cell(0, 10, 'Rechnung', 0, 1, 'C')
+
+    def footer(self):
+        self.set_y(-15)
+        self.set_font('Arial', 'I', 8)
+        self.cell(0, 10, f'Seite {self.page_no()}', 0, 0, 'C')
+
+    def add_invoice_details(self, invoice):
+        self.set_font('Arial', '', 12)
+        self.cell(0, 10, f'Rechnungsnummer: {invoice["invoice_number"]}', 0, 1)
+        self.cell(0, 10, f'Datum: {invoice["date"]}', 0, 1)
+        self.cell(0, 10, f'Kunde: {invoice["customer_name"]}', 0, 1)
+        self.cell(0, 10, f'Adresse: {invoice["customer_address"]}', 0, 1)
+        self.cell(0, 10, '', 0, 1)  # Add an empty line
+
+        self.cell(0, 10, 'Leistungen:', 0, 1)
+        for item in invoice['items']:
+            self.cell(0, 10, f'{item["description"]}: {item["price"]} EUR', 0, 1)
+
+        self.cell(0, 10, '', 0, 1)  # Add an empty line
+        self.cell(0, 10, f'Gesamtbetrag: {invoice["total"]} EUR', 0, 1)
+
+# Beispiel-Rechnung
+invoice = {
+    "invoice_number": "123456",
+    "date": str(date.today()),
+    "customer_name": "Max Mustermann",
+    "customer_address": "Musterstraße 1, 12345 Musterstadt",
+    "items": [
+        {"description": "Artikel 1", "price": "100.00"},
+        {"description": "Artikel 2", "price": "150.00"}
+    ],
+    "total": "250.00"
+}
+
+pdf = InvoicePDF()
+pdf.add_page()
+pdf.add_invoice_details(invoice)
+pdf.output("rechnung.pdf")
+
+print("Rechnung erfolgreich erstellt.")
+
 
 
 # IP 192.168.10.31

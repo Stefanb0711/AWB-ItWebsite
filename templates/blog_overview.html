@@ -22,25 +22,9 @@
       </div>
     </div><!-- End Page Title -->
 
+        <h3 style="margin: auto; text-align: center; justify-content: center;margin-top: 20vh; margin-bottom: 30vh;" >Demnächst folgen Inhalte</h3>
 
-      {% for blog_post in blog_posts %}
-    <div style=" width: 50%; padding-right: 20px; padding-top:20px; padding-bottom: 20px; " class="m-auto row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
-        <div class="col p-4 d-flex flex-column position-static">
-            <strong class="d-inline-block mb-2 text-primary-emphasis"></strong>
-            <h2 class="mb-0">{{ blog_post.title }}</h2>
-            <div class="mb-1 text-body-secondary">Nov 12</div>
-            <p class="card-text mb-auto">{{ blog_content_first_sentences[blog_post.id -1][0] }}</p>
-            <a href="{{ url_for('blog_post', post_id = blog_post.id) }}" class="icon-link gap-1 icon-link-hover stretched-link">
-                Erfahren Sie mehr
-                <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
-            </a>
-        </div>
-        <div class="col-auto d-none d-lg-block" style="height: 100%;">
-            <img width="400" height="250" style="height: 100%;"  src="{{ blog_post.image }}">
-        </div>
-    </div>
 
-    {% endfor %}
 
 
 
