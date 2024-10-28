@@ -11,6 +11,139 @@
 # Help: https://bootstrapmade.com/color-system/
 --------------------------------------------------------------*/
 /* Fonts */
+
+/* Open Sans */
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/static/fonts/static/Open_Sans/OpenSans-Light.woff2") format("woff2"),
+         url("/static/fonts/OpenSans/OpenSans-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/static/fonts/OpenSans/OpenSans-Regular.woff2") format("woff2"),
+         url("/static/fonts/OpenSans/OpenSans-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/static/fonts/OpenSans/OpenSans-Medium.woff2") format("woff2"),
+         url("/static/fonts/OpenSans/OpenSans-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/static/fonts/OpenSans/OpenSans-SemiBold.woff2") format("woff2"),
+         url("/static/fonts/OpenSans/OpenSans-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/static/fonts/OpenSans/OpenSans-Bold.woff2") format("woff2"),
+         url("/static/fonts/OpenSans/OpenSans-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/static/fonts/OpenSans/OpenSans-ExtraBold.woff2") format("woff2"),
+         url("/static/fonts/OpenSans/OpenSans-ExtraBold.woff") format("woff");
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/static/fonts/OpenSans/OpenSans-LightItalic.woff2") format("woff2"),
+         url("/static/fonts/OpenSans/OpenSans-LightItalic.woff") format("woff");
+    font-weight: 300;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/static/fonts/OpenSans/OpenSans-Italic.woff2") format("woff2"),
+         url("/static/fonts/OpenSans/OpenSans-Italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url("/static/fonts/OpenSans/OpenSans-BoldItalic.woff2") format("woff2"),
+         url("/static/fonts/OpenSans/OpenSans-BoldItalic.woff") format("woff");
+    font-weight: 700;
+    font-style: italic;
+}
+
+/* Jost */
+@font-face {
+    font-family: 'Jost';
+    src: url("/static/fonts/Jost/Jost-Thin.woff2") format("woff2"),
+         url("/static/fonts/Jost/Jost-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url("/static/fonts/Jost/Jost-Regular.woff2") format("woff2"),
+         url("/static/fonts/Jost/Jost-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url("/static/fonts/Jost/Jost-Bold.woff2") format("woff2"),
+         url("/static/fonts/Jost/Jost-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Jost';
+    src: url("/static/fonts/Jost/Jost-Italic.woff2") format("woff2"),
+         url("/static/fonts/Jost/Jost-Italic.woff") format("woff");
+    font-weight: 400;
+    font-style: italic;
+}
+
+/* Poppins */
+@font-face {
+    font-family: 'Poppins';
+    src: url("/static/fonts/Poppins/Poppins-Thin.woff2") format("woff2"),
+         url("/static/fonts/Poppins/Poppins-Thin.woff") format("woff");
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url("/static/fonts/Poppins/Poppins-Regular.woff2") format("woff2"),
+         url("/static/fonts/Poppins/Poppins-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Poppins';
+    src: url("/static/fonts/Poppins/Poppins-Bold.woff2") format("woff2"),
+         url("/static/fonts/Poppins/Poppins-Bold.woff") format("woff");
+    font-weight: 700;
+    font-style: normal;
+}
+
+
 :root {
   --default-font: "Open Sans", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
   --heading-font: "Jost", sans-serif;
