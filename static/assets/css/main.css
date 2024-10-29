@@ -15,7 +15,7 @@
 /*Open Sans Regular*/
 @font-face {
     font-family: 'Open Sans';
-    src: url("/static/fonts/Open_Sans/Open-Sans-Regular.woff2") format("woff2");
+    src: url("/static/fonts/Open_Sans/Open-Sans-Regular-300.woff2") format("woff2");
     font-weight: 300;
     font-style: normal;
 }
@@ -29,28 +29,28 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url("/static/fonts/Open_Sans/Open-Sans-Regular.woff2") format("woff2");
+    src: url("/static/fonts/Open_Sans/Open-Sans-Regular-500.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url("/static/fonts/Open_Sans/Open-Sans-Regular.woff2") format("woff2");
+    src: url("/static/fonts/Open_Sans/Open-Sans-Regular-600.woff2") format("woff2");
     font-weight: 600;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url("/static/fonts/Open_Sans/Open-Sans-Regular.woff2") format("woff2");
+    src: url("/static/fonts/Open_Sans/Open-Sans-Regular-700.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url("/static/fonts/Open_Sans/Open-Sans-Regular.woff2") format("woff2");
+    src: url("/static/fonts/Open_Sans/Open-Sans-Regular-800.woff2") format("woff2");
     font-weight: 800;
     font-style: normal;
 }
@@ -58,7 +58,7 @@
 /*Open Sans Italic */
 @font-face {
     font-family: 'Open Sans';
-    src: url("/static/fonts/Open_Sans/Open-Sans-Italic.woff2") format("woff2");
+    src: url("/static/fonts/Open_Sans/Open-Sans-Italic-300.woff2") format("woff2");
     font-weight: 300;
     font-style: italic;
 }
@@ -72,28 +72,28 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url("/static/fonts/Open_Sans/Open-Sans-Italic.woff2") format("woff2");
+    src: url("/static/fonts/Open_Sans/Open-Sans-Italic-500.woff2") format("woff2");
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url("/static/fonts/Open_Sans/Open-Sans-Italic.woff2") format("woff2");
+    src: url("/static/fonts/Open_Sans/Open-Sans-Italic-600.woff2") format("woff2");
     font-weight: 600;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url("/static/fonts/Open_Sans/Open-Sans-Italic.woff2") format("woff2");
+    src: url("/static/fonts/Open_Sans/Open-Sans-Italic-700.woff2") format("woff2");
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Open Sans';
-    src: url("/static/fonts/Open_Sans/Open-Sans-Italic.woff2") format("woff2");
+    src: url("/static/fonts/Open_Sans/Open-Sans-Italic-800.woff2") format("woff2");
     font-weight: 800;
     font-style: italic;
 }
@@ -236,20 +236,20 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Regular-100.woff2") format("woff2");
     font-weight: 100;
     font-style: normal;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Regular-200.woff2") format("woff2");
     font-weight: 200;
     font-style: normal;
 }
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Regular-300.woff2") format("woff2");
     font-weight: 300;
     font-style: normal;
 }
@@ -261,31 +261,31 @@
 }
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Regular-500.woff2") format("woff2");
     font-weight: 500;
     font-style: normal;
 }
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Regular-600.woff2") format("woff2");
     font-weight: 600;
     font-style: normal;
 }
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Regular-700.woff2") format("woff2");
     font-weight: 700;
     font-style: normal;
 }
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Regular-800.woff2") format("woff2");
     font-weight: 800;
     font-style: normal;
 }
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Regular.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Regular-900.woff2") format("woff2");
     font-weight: 900;
     font-style: normal;
 }
@@ -294,21 +294,21 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Italic.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Italic-100.woff2") format("woff2");
     font-weight: 100;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Italic.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Italic-200.woff2") format("woff2");
     font-weight: 200;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Italic.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Italic-300.woff2") format("woff2");
     font-weight: 300;
     font-style: italic;
 }
@@ -322,28 +322,28 @@
 
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Italic.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Italic-500.woff2") format("woff2");
     font-weight: 500;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Italic.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Italic-600.woff2") format("woff2");
     font-weight: 600;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Italic.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Italic-700.woff2") format("woff2");
     font-weight: 700;
     font-style: italic;
 }
 
 @font-face {
     font-family: 'Poppins';
-    src: url("/static/fonts/Poppins/Poppins-Italic.woff2") format("woff2");
+    src: url("/static/fonts/Poppins/Poppins-Italic-800.woff2") format("woff2");
     font-weight: 800;
     font-style: italic;
 }
