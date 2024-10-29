@@ -3,3 +3,26 @@
     height: 64px;
     margin-bottom: 15px;
 }
+
+
+.equal-width-col {
+    flex: 1 1 0 !important; /* Flexibilität der Spalten */
+    max-width: 25% !important; /* 4 Spalten in einer Zeile */
+    width: 25% !important; /* Festgelegt auf 25% Breite */
+    box-sizing: border-box !important; /* Um Margins und Paddings korrekt zu berechnen */
+}
+
+/* Für kleinere Bildschirme, falls Anpassungen notwendig sind */
+@media (max-width: 992px) {
+    .equal-width-col {
+        max-width: 50% !important; /* 2 Spalten auf mittleren Bildschirmen */
+        width: 50% !important;
+    }
+}
+
+@media (max-width: 576px) {
+    .equal-width-col {
+        max-width: 100% !important; /* 1 Spalte auf kleinen Bildschirmen */
+        width: 100% !important;
+    }
+}
